@@ -1,0 +1,16 @@
+body{
+    background-color: #00af43;
+}
+
+.helpbox{
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: darkred;
+    border: 2px dotted black;
+    display:inline-block;
+}
+
+.display-answer{
+    padding-top: 5px;
+    font-weight: bold;
+}

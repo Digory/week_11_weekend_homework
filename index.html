@@ -37,7 +37,7 @@
         <input type="submit" value="save"/>
       </form>
   
-      <h1>Animal List</h1>
+      <h2>Animal List</h2>
       <div>
         <ul id="animal-list">
         </ul>
@@ -46,6 +46,21 @@
       <form id="delete-form">
         <input id="delete-button" type="submit" value="delete"/>
       </form>
+
+      <form id="animal-opinions">
+        <p>So what do you think about animals then</p>
+        <label for="dont-like">Don't really like them</label>
+        <input type="radio" id="dont-like" value="dont-like" name="animal-opinion">
+        <label for="theyre-ok">They're okay</label>
+        <input type="radio" id="theyre-ok" value="theyre-ok" name="animal-opinion">
+        <label for="love-them">I think they are better than humans</label>
+        <input type="radio" id="love-them" value="love-them" name="animal-opinion">
+        <button type="submit" id="animal-opinion-button">Check answer</button>
+    </form>
+    <div id="helpbox" class="helpbox">
+    </div>
+    <div id="display-answer" class="display-answer">
+    </div>
   
 </body>
 </html>
