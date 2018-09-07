@@ -1,16 +1,38 @@
 body{
     background-color: #00af43;
+    margin-left: 30px;
 }
 
-.helpbox{
+p{
+    font-size: 1.2rem;
+}
+
+button{
+    font-size: 1.2rem;
+}
+
+#helpbox{
     font-weight: bold;
     font-size: 0.8rem;
     color: darkred;
-    border: 2px dotted black;
-    display:inline-block;
+    display: inline-block;
 }
 
-.display-answer{
+#display-answer{
     padding-top: 5px;
     font-weight: bold;
+}
+
+.form-wrapper{
+    padding-top: 10px;
+}
+
+.form-item{
+    font-size: 1.2rem;
+    padding-top: 5px;
+    display: block;
+}
+
+.reveal-button{
+    font-size: 2rem;
 }
