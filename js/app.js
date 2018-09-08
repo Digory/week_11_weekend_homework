@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     addFormListeners();
     addOpinionListeners();
     addButtonListeners();
+    addGameListener();
 });
 
 const addFormListeners = function(){
@@ -24,6 +25,22 @@ const addButtonListeners = function(){
     formRevealButton.addEventListener('click', handleRevealFormClick);
     const quizRevealButton = document.querySelector('#reveal-quiz');
     quizRevealButton.addEventListener('click', handleRevealQuizClick);
+    const gameRevealButton = document.querySelector('#reveal-game');
+    gameRevealButton.addEventListener('click', handleRevealGameClick);
+}
+
+const addGameListener = function(){
+    const gameInput = document.querySelector('#game-input');
+    gameInput.addEventListener('input', handleGameInput);
+}
+
+const handleGameInput = function(event){
+    const funGame = document.querySelector('#fun-game');
+    if(event.target.value === 'Digory is cool'){
+        const gameCompleted = document.createElement('h1');
+        gameCompleted.textContent = "Well done!";
+        funGame.appendChild(gameCompleted);
+    }
 }
 
 const getAnimalList = function(){
@@ -79,7 +96,7 @@ const handleAnimalOpinionChange = function(){
     const opinion = new FormData(this);
     switch(opinion.get('animal-opinion')){
         case 'dont-like':
-        helpfulBox.textContent = "come on, seriously?";
+        helpfulBox.textContent = "come on, that can't be true";
         break;
         case 'theyre-ok':
         helpfulBox.textContent = "a bit better";
@@ -100,10 +117,19 @@ const handleRevealFormClick = function(){
 }
 
 const handleRevealQuizClick = function(){
-    const quizToReveal = document.querySelector('#animal-opinions');
+    const quizToReveal = document.querySelector('#second-form');
     if(quizToReveal.style.display === 'block'){
         quizToReveal.style.display = 'none';
     } else{
         quizToReveal.style.display = 'block';
+    }
+}
+
+const handleRevealGameClick = function(){
+    const gameToReveal = document.querySelector('#fun-game');
+    if(gameToReveal.style.display === 'block'){
+        gameToReveal.style.display = 'none';
+    } else{
+        gameToReveal.style.display = 'block';
     }
 }
